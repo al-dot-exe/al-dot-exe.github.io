@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Alex Burton">
+    <meta name="description" content="This is a test post">
+    <meta name="keywords" content="blog,developer,security">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to remove all expired keys from your keyring"/>
+<meta name="twitter:description" content="This is a test post"/>
+
+    <meta property="og:title" content="How to remove all expired keys from your keyring" />
+<meta property="og:description" content="This is a test post" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://alEXE-tech.github.io/posts/removing-expired-keys/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-20T00:00:00+00:00" />
+
+
+
+    <title>
+  How to remove all expired keys from your keyring · Al.exe
+</title>
+
+    
+      <link rel="canonical" href="https://alEXE-tech.github.io/posts/removing-expired-keys/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.58494473cc66d1b79c9dab667b5d2355fcb705d23800c14853fbec87de158092.css" integrity="sha256-WElEc8xm0becnatme10jVfy3BdI4AMFIU/vsh94VgJI=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.b92c9f1e0d01d6b66476ac086c216c51101e5365d8a31b61c38f3f59466fde92.css" integrity="sha256-uSyfHg0B1rZkdqwIbCFsURAeU2XYoxthw48/WUZv3pI=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.96.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Al.exe
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://alEXE-tech.github.io/posts/removing-expired-keys/">
+              How to remove all expired keys from your keyring
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-04-20T00:00:00Z">
+                April 20, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/gpg/">gpg</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/pgp/">pgp</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/privacy/">privacy</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/linux/">linux</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="how-can-we-remove-our-expired-keys-from-our-keyring">
+  How can we remove our expired keys from our keyring?
+  <a class="heading-link" href="#how-can-we-remove-our-expired-keys-from-our-keyring">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>In this post I&rsquo;m going to briefly cover how to purge all expired and revoked keys from your keyring using <a href="https://wiki.archlinux.org/title/GnuPG">gpg2</a>.</p>
+<h3 id="tldr">
+  Tl;Dr
+  <a class="heading-link" href="#tldr">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p><code>gpg2 --list-public-keys --with-colons | grep -a '^pub:[re]:' | cut -d : -f5 | xargs -l gpg --batch --yes --delete-keys</code></p>
+<h5 id="prerequisite-knowledge">
+  Prerequisite knowledge
+  <a class="heading-link" href="#prerequisite-knowledge">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<p>If you&rsquo;re reading this post I&rsquo;m assuming your well-versed <em>enough</em> to be able to use pgp keys fluidly to encrypt and sign data.</p>
+<p>If not, DON&rsquo;T worry. I recommend checking out <a href="https://linoxide.com/gpg-commands-create-public-key/">these</a> two <a href="https://linoxide.com/gpg-command-encrypt-decrypt-file/">linoxide</a> posts to get a more comprehensive guide on how to use gpg.</p>
+<h2 id="the-backstory">
+  The Backstory
+  <a class="heading-link" href="#the-backstory">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>As you may know, working with pgp keys using gpg is a fairly seamless, barebones process. However, that may not always be a good thing.</p>
+<p>As I was learning more about keyring maintenance earlier today, I realized I had way to me expired keys still hanging out in my keyring. I also noticed that <strong>NO WHERE</strong> in the dusty documentation was there a way to easily purge your keyring of invalid keys.
+The most I could possibly do was utilize the <code>gpg2 --list-public-keys --list-options show-unusable-uids</code> and delete them individually from there.</p>
+
+
+<code>
+show-unusable-uids
+                     Show revoked and expired user IDs in key listings. Defaults to no.
+</code>
+
+
+<p>Not only would this be a tedious process if you haven&rsquo;t been doing your regular cleaning, but I also found this command to be unreliable as it wouldn&rsquo;t show me all of my invalid keys.</p>
+<p>It may have had something to do with this bit of text that I also happened to stumble across in the dusty docs.</p>
+
+
+<code>
+--with-colons
+              Print key listings delimited by colons. Note that the output will be encoded in UTF-8 regardless of any --display-charset setting. This format is useful when GnuPG is called
+              from scripts and other programs as it is easily machine parsed. The details of this format are documented in the file ‘doc/DETAILS’, which is included in  the  GnuPG  source
+              distribution.
+</code>
+
+
+<p>Interesting&hellip;</p>
+<p>It turns out that the human readable format that we are used to seeing for a typical gpg public key output doesn&rsquo;t play nice with the machine. Instead we need to convert our output
+into a &ldquo;machine parseable&rdquo; format.</p>
+<h5 id="in-other-words">
+  In Other Words
+  <a class="heading-link" href="#in-other-words">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h5>
+<p>We have to go from something like this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gpg2 --list-public-keys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pub   rsa4096 2015-01-05 [SC]
+</span></span><span style="display:flex;"><span>      2D1771FE4D767DJSA6B089FAD655A4F21830E06A
+</span></span><span style="display:flex;"><span>uid           [  expired  ] John Doe &lt;hisexpiredkey.com&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pub   rsa4096 2012-11-15 [SC]
+</span></span><span style="display:flex;"><span>      5B2DA4B9F9JFPB2019d1878102F77ACF3F48CB21
+</span></span><span style="display:flex;"><span>uid           [  revoked  ] Jane Doe &lt;herexpiredkey.org&gt;
+</span></span><span style="display:flex;"><span>sub   rsa4096 2012-11-15 [E]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pub   rsa4096 2022-04-17 [SC] [expires: 2023-04-12]
+</span></span><span style="display:flex;"><span>      840391C6B5198E5BC46E29AE395DBDA8FA41644F
+</span></span><span style="display:flex;"><span>uid           [ultimate] Al.exe (Based in Los Angeles if anyone wants to trade signatures.) &lt;alEXE-tech@protonmail.com&gt;
+</span></span><span style="display:flex;"><span>sub   rsa4096 2022-04-17 [E] [expires: 2023-04-12]
+</span></span></code></pre></div><p>To this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gpg2 --list-public-keys --with-colons
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>uid:e::::1420483577::A4JFSYYYE957FE7F6D94F14069E9087E8A5FC4DA::John Doe &lt;hisexpiredkey.com&gt;::::::::::0:
+</span></span><span style="display:flex;"><span>pub:e:4096:1:ACC2602F3F4290SJLB21:1353005334:::-:::scESC::::::23::0:
+</span></span><span style="display:flex;"><span>fpr:::::::::B35B2DJFJ109F10949226F77ACC2602F3F48CB21:
+</span></span><span style="display:flex;"><span>uid:r::::1353005334::99A0C38FCCF794BF803B9E397F9DJ74389219594::Jane Doe &lt;herexpiredkey.org&gt;::::::::::0:
+</span></span><span style="display:flex;"><span>pub:r:4096:1:4F75939930498E2ADJDJ:13523215334::::::e::::::23:
+</span></span><span style="display:flex;"><span>fpr:::::::::73471302917A6769JJSJJKSK4F75939930498E2A:
+</span></span><span style="display:flex;"><span>uid:u::::1650178921::2BA40199B357A5BA344476AA186305F77F6CBF63::Al.exe (Based in Los Angeles if anyone wants to trade signatures.) &lt;alEXE-tech@protonmail.com&gt;::::::::::0:
+</span></span><span style="display:flex;"><span>sub:u:4096:1:FEF4CDCAD14A38FD:1650178921:1681282921:::::e::::::23:
+</span></span><span style="display:flex;"><span>fpr:::::::::7BA9BD9DEE25951A626DF556FEF4CDCAD14A38FD:
+</span></span></code></pre></div><p>Quite a disgusting bit of output if you ask me. But if it helps us get the job done then so be it. More details on how to interpret this nonsense can be viewed <a href="https://github.com/gpg/gnupg/blob/master/doc/DETAILS">here</a></p>
+<h2 id="the-command">
+  The Command
+  <a class="heading-link" href="#the-command">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>After scouring the internet for a couple hours I managed to stumble across this old <a href="https://lists.debian.org/debian-security/2003/03/msg00518.html">debian-security</a> thread that had the piped command chain to do our job.</p>
+<p><code>gpg2 --list-public-keys --with-colons | grep -a '^pub:[re]:' | cut -d : -f5 | xargs -l gpg --batch --yes --delete-keys</code></p>
+<p>Let me quickly break down some of the important details for you all.</p>
+<p>First we are going to list our public keys like I previously showed you. We are then piping that into grep so we will only target the public keys (pub), that are either revoked(r) or expired(e).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pub:e:4096:1:ACC2602F3F4290SJLB21:1353005334:::-:::scESC::::::23::0:
+</span></span><span style="display:flex;"><span>pub:r:4096:1:4F75939930498E2ADJDJ:13523215334::::::e::::::23:
+</span></span></code></pre></div><p>We then utilize the <code>cut</code> command to separate our line sections by colons and remove all columns, <strong>EXCEPT</strong> the 5th column (or field).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ACC2602F3F4290SJLB21
+</span></span><span style="display:flex;"><span>4F75939930498E2ADJDJ
+</span></span></code></pre></div><p>From there it&rsquo;s just a matter of running <code>gpg --delete-keys</code> on a batch of keys</p>
+<hr>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>GnuPG does one job, and it does that job right!, thus unfortunately it can be a bit of a headache at times.</p>
+<p>Thanks for Reading! :&gt;</p>
+<p>&ndash; Al.exe</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    <div>
+    
+      
+        
+          
+          <a href="https://github.com/alEXE-tech" aria-label="Github"   >
+            <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+          </a>
+          
+        
+          
+          <a href="https://twitter.com/alEXE_tech/" aria-label="Twitter"   >
+            <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+          </a>
+          
+        
+          
+          <a href="https://keys.openpgp.org/search?q=alEXE-tech%40protonmail.com" aria-label="Public Key"   >
+            <i class="fa fa-2x fa-key-modern" aria-hidden="true"></i>
+          </a>
+          
+        
+      
+      <span>|</span>
+    
+    </div>
+
+    <div>
+      Made with
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart"
+        class="svg-inline--fa fa-heart fa-w-16 mx-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+        style="color:red">
+        <path fill="currentColor"
+          d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+        </path>
+      </svg>
+      by Alex Burton with the help of <a href="https://gohugo.io/">Hugo</a> & <a
+        href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+        <span>|</span>
+    </div>  
+
+     <div>
+      ©
+      
+      2022
+       Al.exe 
+      
+     </div>
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
