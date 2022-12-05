@@ -2,14 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://alEXE-tech.github.io/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/tags/engineering/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/tags/mvc/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/posts/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/tags/program-design/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/tags/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alEXE-tech.github.io/posts/what-is-mvc/</loc>
+    <lastmod>2022-09-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://alEXE-tech.github.io/thank-you/</loc>
     <lastmod>2022-04-20T03:38:40-07:00</lastmod>
   </url><url>
     <loc>https://alEXE-tech.github.io/pub-key/</loc>
     <lastmod>2022-04-19T23:54:25-07:00</lastmod>
-  </url><url>
-    <loc>https://alEXE-tech.github.io/</loc>
-    <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alEXE-tech.github.io/tags/gpg/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
@@ -23,13 +41,7 @@
     <loc>https://alEXE-tech.github.io/tags/pgp/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alEXE-tech.github.io/posts/</loc>
-    <lastmod>2022-04-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alEXE-tech.github.io/tags/privacy/</loc>
-    <lastmod>2022-04-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alEXE-tech.github.io/tags/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alEXE-tech.github.io/about/</loc>
