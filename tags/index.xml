@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Al.exe</title>
+    <link>https://al-dot-exe.github.io/tags/</link>
+    <description>Recent content in Tags on Al.exe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://al-dot-exe.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gpg</title>
+      <link>https://al-dot-exe.github.io/tags/gpg/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/tags/gpg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://al-dot-exe.github.io/tags/linux/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pgp</title>
+      <link>https://al-dot-exe.github.io/tags/pgp/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/tags/pgp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://al-dot-exe.github.io/tags/privacy/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

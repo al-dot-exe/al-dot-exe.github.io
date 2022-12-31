@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Al.exe</title>
+    <link>https://al-dot-exe.github.io/</link>
+    <description>Recent content on Al.exe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://al-dot-exe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thank You For Submitting!</title>
+      <link>https://al-dot-exe.github.io/thank-you/</link>
+      <pubDate>Wed, 20 Apr 2022 03:38:40 -0700</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/thank-you/</guid>
+      <description>I will get back to you as soon as I can. In the meantime, I&amp;rsquo;d appreciate a follow on twitter
+If you want to check out more of my open source activity, follow me on github</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://al-dot-exe.github.io/pub-key/</link>
+      <pubDate>Tue, 19 Apr 2022 23:54:25 -0700</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/pub-key/</guid>
+      <description>Copy the key below or download it at keys.openpgp
+-----BEGIN PGP PUBLIC KEY BLOCK----- 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 7B5C =3Twr -----END PGP PUBLIC KEY BLOCK----- </description>
+    </item>
+    
+    <item>
+      <title>How to remove all expired keys from your keyring</title>
+      <link>https://al-dot-exe.github.io/posts/removing-expired-keys/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/posts/removing-expired-keys/</guid>
+      <description>How can we remove our expired keys from our keyring? In this post I&amp;rsquo;m going to briefly cover how to purge all expired and revoked keys from your keyring using gpg2.
+Tl;Dr gpg2 --list-public-keys --with-colons | grep -a &#39;^pub:[re]:&#39; | cut -d : -f5 | xargs -l gpg --batch --yes --delete-keys
+Prerequisite knowledge If you&amp;rsquo;re reading this post I&amp;rsquo;m assuming your well-versed enough to be able to use pgp keys fluidly to encrypt and sign data.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://al-dot-exe.github.io/about/</link>
+      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/about/</guid>
+      <description>My name&amp;rsquo;s Alex and welcome to my little corner of the internet!
+I write tech posts on what I discover while going down the info sec rabbit hole. So check out my blog if you want to go down that rabbit hole with me!
+During the work week, I&amp;rsquo;m building web apps for my clients. You can see the links to my work below:
+Projects
+Github Page
+Resume
+When I&amp;rsquo;m away from my computer, I&amp;rsquo;m MOST LIKELY eating with friends and family, playing video games, or teaching yoga.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://al-dot-exe.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/contact/</guid>
+      <description>Feel free to email me here to inquire about my development services.
+Here is my public key as well for those who need it.
+Besides that, my DM&amp;rsquo;s are always open via twitter @Al_dot_exe.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://al-dot-exe.github.io/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://al-dot-exe.github.io/projects/</guid>
+      <description> Toucan Torrent A browser based torrent client to run in your local area network
+Creekside Capital Management A Website for a capital management firm based out in California.
+jsRadio A Radio Interface to play the top 50 hits from the Radio World API.
+Other Projects PolyCrypto A Polybar script written in js to get Bitcoin price updates. </description>
+    </item>
+    
+  </channel>
+</rss>
