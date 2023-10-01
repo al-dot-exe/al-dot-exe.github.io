@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gpg on Al.exe</title>
-    <link>https://al-dot-exe.github.io/tags/gpg/</link>
+    <link>public/tags/gpg/</link>
     <description>Recent content in gpg on Al.exe</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://al-dot-exe.github.io/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="public/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to remove all expired keys from your keyring</title>
-      <link>https://al-dot-exe.github.io/posts/removing-expired-keys/</link>
+      <link>public/posts/removing-expired-keys/</link>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://al-dot-exe.github.io/posts/removing-expired-keys/</guid>
+      <guid>public/posts/removing-expired-keys/</guid>
       <description>How can we remove our expired keys from our keyring? In this post I&amp;rsquo;m going to briefly cover how to purge all expired and revoked keys from your keyring using gpg2.
 Tl;Dr gpg2 --list-public-keys --with-colons | grep -a &#39;^pub:[re]:&#39; | cut -d : -f5 | xargs -l gpg --batch --yes --delete-keys
 Prerequisite knowledge If you&amp;rsquo;re reading this post I&amp;rsquo;m assuming your well-versed enough to be able to use pgp keys fluidly to encrypt and sign data.</description>
